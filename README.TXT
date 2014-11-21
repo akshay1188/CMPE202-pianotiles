@@ -8,5 +8,5 @@ PROJECT TITLE: Piano Tiles
 PURPOSE OF PROJECT: CMPE 202 Class Project
 VERSION or DATE: v1
 HOW TO START THIS PROJECT: Install greenfoot and open the project
-AUTHORS: @akshay1188 @arjunmantri
+AUTHORS: @akshay1188 @arjunmantri @dineshpandey2014 @harish237
 USER INSTRUCTIONS:

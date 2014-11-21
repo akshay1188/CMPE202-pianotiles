@@ -34,6 +34,7 @@ public class Tile extends Actor
         if(Greenfoot.mouseClicked(this)){
             if(isBlack){
                 System.out.println("Black");
+                setColor("grey");
                 //parentRow.update();
             }
         }
@@ -47,6 +48,10 @@ public class Tile extends Actor
         }else if(s.equalsIgnoreCase("white")){
             setImage("white_tile.png");
             isWhite = true;
+            isBlack = false;
+        }else if(s.equalsIgnoreCase("grey")){
+            setImage("grey_tile.png");
+            isWhite = false;
             isBlack = false;
         }
     }
