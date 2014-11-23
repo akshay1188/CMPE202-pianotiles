@@ -10,6 +10,7 @@ public class Tile extends Actor
 {
     private boolean isBlack = false;
     private boolean isWhite = false;
+    private boolean isClicked = false;
     
     private Row parentRow;
     private int speed = 4;
@@ -31,11 +32,25 @@ public class Tile extends Actor
     
     public void act() 
     {
+        if(isBlack){
+            System.out.println("Black");
+            if(getY() >= 400){
+                if(!isClicked){
+                    gameOver();
+                    this.setColor("red");
+                }
+            }
+        }
         if(Greenfoot.mouseClicked(this)){
             if(isBlack){
-                System.out.println("Black");
                 setColor("grey");
-                //parentRow.update();
+                Score.incrementScore();
+                isClicked = true;
+            }
+            if(isWhite){
+                //gameover
+                gameOver();    
+                this.setColor("red");
             }
         }
     }    
@@ -53,6 +68,10 @@ public class Tile extends Actor
             setImage("grey_tile.png");
             isWhite = false;
             isBlack = false;
+        }else if(s.equalsIgnoreCase("red")){
+            setImage("red-tile.png");
+            isWhite = false;
+            isBlack = false;
         }
     }
     
@@ -66,5 +85,11 @@ public class Tile extends Actor
     
     public void moveDown(){
         setLocation(getX(),getY() + speed);
+    }
+    
+    void gameOver(){
+        Greenfoot.stop();
+        GameOver gameover = new GameOver();        
+        getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
     }
 }

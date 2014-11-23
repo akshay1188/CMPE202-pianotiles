@@ -27,9 +27,12 @@ public class Row extends Actor implements Movable
             x = 0;
             for(int i = 0; i < tiles.size(); i++){
                 Tile tile = (Tile)tiles.get(i);
+                tile.setColor("white");
                 tile.setLocation(x+(TILE_WIDTH)/2,-50);
                 x = x + TILE_WIDTH;
             }    
+            Tile black = tiles.get(Greenfoot.getRandomNumber(4));
+            black.setColor("Black");
         }    
     }    
     
@@ -73,7 +76,7 @@ public class Row extends Actor implements Movable
             getWorld().addObject(t,x+(TILE_WIDTH)/2,y+(TILE_HEIGHT)/2);
             x = x + TILE_WIDTH;
         }
-        Tile t = tiles.get(Greenfoot.getRandomNumber(3));
+        Tile t = tiles.get(Greenfoot.getRandomNumber(4));
         t.setColor("Black");
     }
     
