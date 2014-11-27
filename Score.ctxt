@@ -2,7 +2,11 @@
 comment0.params=
 comment0.target=int\ getScore()
 comment1.params=
-comment1.target=void\ incrementScore()
+comment1.target=void\ resetSpeed()
 comment2.params=
-comment2.target=void\ resetScore()
-numComments=3
+comment2.target=void\ incrementScore()
+comment3.params=
+comment3.target=void\ resetScore()
+comment4.params=
+comment4.target=void\ reset()
+numComments=5

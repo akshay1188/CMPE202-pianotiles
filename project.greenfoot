@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Nov 23 02:56:42 PST 2014
+#Thu Nov 27 02:18:11 PST 2014
 target4.type=ClassTarget
 dependency3.from=TheWorld
 target6.editor.width=900
@@ -44,8 +44,8 @@ dependency4.to=Row
 dependency5.to=Score
 target1.showInterface=false
 target4.editor.width=900
-target5.showInterface=false
 dependency6.to=Score
+target5.showInterface=false
 target6.width=80
 target5.naviview.expanded=true
 target6.height=50
@@ -62,13 +62,13 @@ class.Tile.superclass=greenfoot.Actor
 target1.naviview.expanded=true
 target2.editor.y=27
 target2.height=50
-target5.y=130
-target4.height=50
 target2.editor.x=40
+target4.height=50
+target5.y=130
 target5.x=10
 target1.name=GameOver
-target4.y=10
 class.Score.superclass=
+target4.y=10
 target4.x=70
 target3.editor.width=900
 dependency7.from=Tile
@@ -97,7 +97,7 @@ target6.editor.y=27
 target6.editor.x=40
 target4.naviview.expanded=true
 package.numDependencies=7
-simulation.speed=41
+simulation.speed=50
 target3.editor.height=700
 target3.type=ClassTarget
 target4.width=80

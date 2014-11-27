@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 /**
  * Write a description of class Tile here.
  * 
@@ -19,7 +19,7 @@ public class Tile extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Tile(){
-
+        setRotation(0);
     }
     
     public void setRow(Row row){
@@ -32,27 +32,28 @@ public class Tile extends Actor
     
     public void act() 
     {
-        if(isBlack){
-            System.out.println("Black");
-            if(getY() >= 400){
-                if(!isClicked){
-                    gameOver();
+
+            if(isBlack){
+                if(getY() >= 400){
+                    if(!isClicked){
+                        gameOver();
+                        this.setColor("red");
+                    }
+                }
+            }
+            if(Greenfoot.mouseClicked(this)){
+                if(isBlack){
+                    setColor("grey");
+                    Score.incrementScore();
+                    isClicked = true;
+                    ((TheWorld)getWorld()).isPaused = false;
+                }
+                if(isWhite){
+                    //gameover
+                    gameOver();    
                     this.setColor("red");
                 }
             }
-        }
-        if(Greenfoot.mouseClicked(this)){
-            if(isBlack){
-                setColor("grey");
-                Score.incrementScore();
-                isClicked = true;
-            }
-            if(isWhite){
-                //gameover
-                gameOver();    
-                this.setColor("red");
-            }
-        }
     }    
     
     public void setColor(String s){
@@ -60,10 +61,16 @@ public class Tile extends Actor
             setImage("black_tile.png");
             isBlack = true;
             isWhite = false;
+            isClicked = false;
+            System.out.println(getY());
+            if(getY() == 350){
+                setStartTile();
+            }
         }else if(s.equalsIgnoreCase("white")){
             setImage("white_tile.png");
             isWhite = true;
             isBlack = false;
+            isClicked = false;
         }else if(s.equalsIgnoreCase("grey")){
             setImage("grey_tile.png");
             isWhite = false;
@@ -91,5 +98,12 @@ public class Tile extends Actor
         Greenfoot.stop();
         GameOver gameover = new GameOver();        
         getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
+    }
+    
+    public void setStartTile(){
+        String score = "Start";
+        Color black = new Color(0.0f,0.0f,0.0f);
+        Color white = new Color(1.0f,1.0f,1.0f);
+        setImage("start_tile.png");
     }
 }

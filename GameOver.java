@@ -14,7 +14,8 @@ public class GameOver extends Actor
         Color white = new Color(1.0f,1.0f,1.0f);
         GreenfootImage gameoverImage = new GreenfootImage(score, 25, white, black);
         setImage(gameoverImage);
-        Score.resetScore();
+        Score.reset();
+
     }
     public void act() 
     {

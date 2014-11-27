@@ -21,19 +21,13 @@ public class Row extends Actor implements Movable
     
     public void act() 
     {
-        moveDown();
-        Tile t = (Tile)tiles.get(0);
-        if(t.getY() >= 450){
-            x = 0;
-            for(int i = 0; i < tiles.size(); i++){
-                Tile tile = (Tile)tiles.get(i);
-                tile.setColor("white");
-                tile.setLocation(x+(TILE_WIDTH)/2,-50);
-                x = x + TILE_WIDTH;
-            }    
-            Tile black = tiles.get(Greenfoot.getRandomNumber(4));
-            black.setColor("Black");
-        }    
+        if(!((TheWorld)getWorld()).isPaused){
+            moveDown();        
+            Tile t = (Tile)tiles.get(0);
+            if(t.getY() >= 450){
+                this.positionRowAtTop();
+            }
+        }
     }    
     
     public void addTile(Tile t){
@@ -58,16 +52,6 @@ public class Row extends Actor implements Movable
         }
     }
     
-    private void moveDownOneRow(){
-        Tile tile = (Tile)tiles.get(0);
-        while(tile.getY() < 450){
-            for(int i = 0; i < tiles.size(); i++){
-                Tile t = (Tile)tiles.get(i);
-                t.moveDown();
-            }
-        }
-    }
-    
     private void positionTiles(){
         for(int i = 0; i < tiles.size(); i++){
             Tile t = (Tile)tiles.get(i);
@@ -80,8 +64,19 @@ public class Row extends Actor implements Movable
         t.setColor("Black");
     }
     
+    private void positionRowAtTop(){
+            x = 0;
+            for(int i = 0; i < tiles.size(); i++){
+                Tile tile = (Tile)tiles.get(i);
+                tile.setColor("white");
+                tile.setLocation(x+(TILE_WIDTH)/2,-(TILE_HEIGHT/2));
+                x = x + TILE_WIDTH;
+            }    
+            Tile black = tiles.get(Greenfoot.getRandomNumber(4));
+            black.setColor("Black");
+    }
+    
     public void update(){
         System.out.println("updating");
-        moveDownOneRow();
     }
 }
