@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Nov 27 02:18:11 PST 2014
+#Sat Nov 29 13:14:07 PST 2014
 target4.type=ClassTarget
 dependency3.from=TheWorld
 target6.editor.width=900
@@ -11,6 +11,7 @@ target1.editor.y=27
 target1.editor.x=40
 target4.name=TheWorld
 target4.typeParameters=
+class.Points.superclass=greenfoot.Actor
 target1.height=50
 target5.type=InterfaceTarget
 target3.typeParameters=
@@ -21,6 +22,7 @@ target2.width=80
 target3.editor.y=27
 target3.editor.x=40
 target5.name=Movable
+class.Subject.superclass=
 target5.editor.width=900
 target5.editor.y=27
 target5.editor.x=40
@@ -76,6 +78,7 @@ target3.y=70
 target3.x=160
 dependency7.type=UsesDependency
 target2.type=ClassTarget
+class.Observer.superclass=greenfoot.Actor
 class.GameOver.superclass=greenfoot.Actor
 target2.y=130
 target2.x=100
@@ -97,7 +100,7 @@ target6.editor.y=27
 target6.editor.x=40
 target4.naviview.expanded=true
 package.numDependencies=7
-simulation.speed=50
+simulation.speed=40
 target3.editor.height=700
 target3.type=ClassTarget
 target4.width=80

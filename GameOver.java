@@ -9,13 +9,12 @@ import java.awt.Color;
 public class GameOver extends Actor
 {
     public GameOver(){
-        String score = "Gameover\n Your score is "+Score.getScore();
+        String score = "Gameover\n Your score is "+Score.getInstance().getScore();
         Color black = new Color(0.0f,0.0f,0.0f);
         Color white = new Color(1.0f,1.0f,1.0f);
         GreenfootImage gameoverImage = new GreenfootImage(score, 25, white, black);
         setImage(gameoverImage);
-        Score.reset();
-
+        Score.getInstance().reset();
     }
     public void act() 
     {
