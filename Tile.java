@@ -11,7 +11,7 @@ public class Tile extends Actor
     private boolean isBlack = false;
     private boolean isWhite = false;
     private boolean isClicked = false;
-    
+    Score score = new Score();
     private Row parentRow;
     private int speed = 4;
     /**
@@ -44,7 +44,8 @@ public class Tile extends Actor
             if(Greenfoot.mouseClicked(this)){
                 if(isBlack){
                     setColor("grey");
-                    Score.incrementScore();
+                    score.ZenMode();
+                    //Score.incrementScore();
                     isClicked = true;
                     ((TheWorld)getWorld()).isPaused = false;
                 }

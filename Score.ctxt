@@ -4,9 +4,12 @@ comment0.target=int\ getScore()
 comment1.params=
 comment1.target=void\ resetSpeed()
 comment2.params=
-comment2.target=void\ incrementScore()
+comment2.target=void\ ClassicMode()
 comment3.params=
-comment3.target=void\ resetScore()
+comment3.target=void\ ZenMode()
 comment4.params=
-comment4.target=void\ reset()
-numComments=5
+comment4.target=void\ resetScore()
+comment4.text=public\ static\ void\ incrementScore(){\n\ \ \ \ \ \ \ \ if(speed\ >\ 50){\n\ \ \ \ \ \ \ \ \ \ \ \ if(score\ %\ 8\ \=\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Greenfoot.setSpeed(speed);\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed+\=2;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }else{\n\ \ \ \ \ \ \ \ \ \ \ \ if(score\ %\ 4\ \=\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Greenfoot.setSpeed(speed);\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed+\=2;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ score++;\ \ \ \ \n}
+comment5.params=
+comment5.target=void\ reset()
+numComments=6
