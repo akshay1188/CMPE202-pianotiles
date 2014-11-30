@@ -28,6 +28,6 @@ public class Welcome extends World
     private void prepare()
     {
         GameStart gamestart2 = new GameStart(new Start());
-        addObject(gamestart2, 106, 202);
+        addObject(gamestart2, 106, 350);
     }
  }
