@@ -17,8 +17,16 @@ public class TheWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(200, 400, 1, false); 
+        prepare();
+    }
 
-        Row row0 = new Row(0,-100);
+    /**
+     * Prepare the world for the start of the program. That is: create the initial
+     * objects and add them to the world.
+     */
+    private void prepare()
+    {
+         Row row0 = new Row(0,-100);
 
         Row row1 = new Row(0,0);
 
@@ -83,15 +91,10 @@ public class TheWorld extends World
         row4.addTile(tile15);
         row4.addTile(tile16);
 
-        prepare();
-    }
-
-    /**
-     * Prepare the world for the start of the program. That is: create the initial
-     * objects and add them to the world.
-     */
-    private void prepare()
-    {
-         
+        
+        Points points = new Points();
+        addObject(points, 180, 20);
+        
+        Score.getInstance().attach(points);
     }
 }

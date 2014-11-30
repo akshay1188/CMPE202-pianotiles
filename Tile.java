@@ -11,7 +11,7 @@ public class Tile extends Actor
     private boolean isBlack = false;
     private boolean isWhite = false;
     private boolean isClicked = false;
-    
+    Score score = Score.getInstance();
     private Row parentRow;
     private int speed = 4;
     /**
@@ -19,7 +19,7 @@ public class Tile extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Tile(){
-        setRotation(0);
+
     }
     
     public void setRow(Row row){
@@ -32,7 +32,6 @@ public class Tile extends Actor
     
     public void act() 
     {
-
             if(isBlack){
                 if(getY() >= 400){
                     if(!isClicked){
@@ -44,7 +43,9 @@ public class Tile extends Actor
             if(Greenfoot.mouseClicked(this)){
                 if(isBlack){
                     setColor("grey");
-                    Score.incrementScore();
+
+                    score.ZenMode();
+                    //Score.incrementScore();
                     isClicked = true;
                     ((TheWorld)getWorld()).isPaused = false;
                 }
@@ -101,9 +102,9 @@ public class Tile extends Actor
     }
     
     public void setStartTile(){
-        String score = "Start";
-        Color black = new Color(0.0f,0.0f,0.0f);
-        Color white = new Color(1.0f,1.0f,1.0f);
+//        String score = "Start";
+//        Color black = new Color(0.0f,0.0f,0.0f);
+//        Color white = new Color(1.0f,1.0f,1.0f);
         setImage("start_tile.png");
     }
 }
