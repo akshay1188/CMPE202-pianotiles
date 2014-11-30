@@ -27,7 +27,22 @@ public class Welcome extends World
      */
     private void prepare()
     {
-        GameStart gamestart2 = new GameStart(new Start());
-        addObject(gamestart2, 106, 350);
+        //        GameStart gamestart2 = new GameStart(new Start());
+        //        addObject(gamestart2, 106, 350);
+        ButtonFast buttonFast = new ButtonFast();
+        addObject(buttonFast, 58, 344);
+        
+        ButtonSlow buttonSlow = new ButtonSlow();
+        addObject(buttonSlow, 144, 344);
+        
+        Command commandSlow = new ConcreteCommand();
+        Command commandFast = new ConcreteCommand();
+        
+        commandSlow.setReceiver(new ReceiverSlow());
+        commandFast.setReceiver(new ReceiverFast());
+        
+        buttonFast.setCommand(commandFast);
+        buttonSlow.setCommand(commandSlow);
+        
     }
  }

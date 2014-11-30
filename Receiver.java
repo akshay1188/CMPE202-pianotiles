@@ -1,13 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Movable here.
+ * Write a description of class Receiver here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public interface Command 
+public interface Receiver
 {
-    public void execute();
-    public void setReceiver(Receiver r);
+    public void setMode();
 }

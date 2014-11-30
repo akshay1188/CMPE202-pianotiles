@@ -12,6 +12,11 @@ public class Score {
     static private ArrayList<Observer> observers = new ArrayList<Observer>();
     
     private static Score scoreInstance;
+    private static GameStrategy strategy;
+    
+    public void setStrategy(GameStrategy strategy){
+        this.strategy = strategy;
+    }
     
     private Score(){
     }
@@ -32,7 +37,7 @@ public class Score {
     }
 
     public void incrementScore(){
-        StrategyContext ctx = new StrategyContext(new Slow());
+        StrategyContext ctx = new StrategyContext(strategy);
         int speed = ctx.executeStrategy();
         Greenfoot.setSpeed(speed);
         score++;

@@ -24,4 +24,8 @@ public class GameStart extends Actor implements Command
          execute();
         }
     }
+    
+    public void setReceiver(Receiver r){
+    
+    }
 }
