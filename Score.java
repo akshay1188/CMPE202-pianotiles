@@ -82,7 +82,7 @@ public class Score implements Speed {
         score++;    
     }*/
     
-    public static void resetScore(){
+    public void resetScore(){
         score = 0;
     }
     

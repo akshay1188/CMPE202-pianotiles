@@ -65,15 +65,15 @@ public class Row extends Actor implements Movable
     }
     
     private void positionRowAtTop(){
-            x = 0;
-            for(int i = 0; i < tiles.size(); i++){
-                Tile tile = (Tile)tiles.get(i);
-                tile.setColor("white");
-                tile.setLocation(x+(TILE_WIDTH)/2,-(TILE_HEIGHT/2));
-                x = x + TILE_WIDTH;
-            }    
-            Tile black = tiles.get(Greenfoot.getRandomNumber(4));
-            black.setColor("Black");
+        x = 0;
+        for(int i = 0; i < tiles.size(); i++){
+            Tile tile = (Tile)tiles.get(i);
+            tile.setColor("white");
+            tile.setLocation(x+(TILE_WIDTH)/2,-(TILE_HEIGHT/2));
+            x = x + TILE_WIDTH;
+        }    
+        Tile black = tiles.get(Greenfoot.getRandomNumber(4));
+        black.setColor("Black");
     }
     
     public void update(){
