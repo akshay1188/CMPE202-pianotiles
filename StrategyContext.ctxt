@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=strategy
+comment0.target=StrategyContext(GameStrategy)
+comment1.params=
+comment1.target=int\ executeStrategy()
+numComments=2

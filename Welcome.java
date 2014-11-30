@@ -27,7 +27,7 @@ public class Welcome extends World
      */
     private void prepare()
     {
-         GameStart gamestart2 = new GameStart(new Start());
+        GameStart gamestart2 = new GameStart(new Start());
         addObject(gamestart2, 106, 202);
     }
  }

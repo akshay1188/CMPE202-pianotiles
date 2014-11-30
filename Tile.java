@@ -44,8 +44,8 @@ public class Tile extends Actor
                 if(isBlack){
                     setColor("grey");
 
-                    score.ZenMode();
-                    //Score.incrementScore();
+                    //score.ZenMode();
+                    Score.getInstance().incrementScore();
                     isClicked = true;
                     ((TheWorld)getWorld()).isPaused = false;
                 }

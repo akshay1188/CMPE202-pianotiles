@@ -75,8 +75,4 @@ public class Row extends Actor implements Movable
         Tile black = tiles.get(Greenfoot.getRandomNumber(4));
         black.setColor("Black");
     }
-    
-    public void update(){
-        System.out.println("updating");
-    }
 }

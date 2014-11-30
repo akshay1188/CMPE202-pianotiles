@@ -7,9 +7,8 @@ import java.util.ArrayList;
  * @version (a version number or a date)
  */
 
-public class Score implements Speed {
+public class Score {
     static private int score = 0;
-    static private int speed = 40;
     static private ArrayList<Observer> observers = new ArrayList<Observer>();
     
     private static Score scoreInstance;
@@ -29,58 +28,16 @@ public class Score implements Speed {
     }
 
     public void resetSpeed(){
-        speed = 40;
+        Greenfoot.setSpeed(40);
     }
-    
 
-    public void ClassicMode()
-    {
-       if(speed > 50){
-            if(score % 8 == 0){
-                Greenfoot.setSpeed(speed);
-                speed+=2;
-            }
-        }else{
-            if(score % 4 == 0){
-                Greenfoot.setSpeed(speed);
-                speed+=2;
-            }
-        }
-        score++;    
+    public void incrementScore(){
+        StrategyContext ctx = new StrategyContext(new Slow());
+        int speed = ctx.executeStrategy();
+        Greenfoot.setSpeed(speed);
+        score++;
         notifyObservers();
     }
-    
-
-    public void ZenMode()
-    {
-         if(speed > 30){
-            if(score % 6 == 0){
-                Greenfoot.setSpeed(speed);
-                speed+=4;
-            }
-        }else{
-            if(score % 2 == 0){
-                Greenfoot.setSpeed(speed);
-                speed+=4;
-            }
-        }
-        score+=5;
-        notifyObservers();
-    }
-    /*public static void incrementScore(){
-        if(speed > 50){
-            if(score % 8 == 0){
-                Greenfoot.setSpeed(speed);
-                speed+=2;
-            }
-        }else{
-            if(score % 4 == 0){
-                Greenfoot.setSpeed(speed);
-                speed+=2;
-            }
-        }
-        score++;    
-    }*/
     
     public void resetScore(){
         score = 0;

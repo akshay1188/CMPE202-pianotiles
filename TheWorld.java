@@ -26,7 +26,8 @@ public class TheWorld extends World
      */
     private void prepare()
     {
-         Row row0 = new Row(0,-100);
+        
+        Row row0 = new Row(0,-100);
 
         Row row1 = new Row(0,0);
 
@@ -91,10 +92,9 @@ public class TheWorld extends World
         row4.addTile(tile15);
         row4.addTile(tile16);
 
-        
         Points points = new Points();
         addObject(points, 180, 20);
-        
+
         Score.getInstance().attach(points);
     }
 }
