@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ ClassicMode()
-comment0.text=\n\ In\ this\ interface\ more\ methods\ can\ be\ added\ based\ new\ startegy\ implemented\ and\ \n\ new\ strategy\ can\ be\ added\ to\ the\ game\ by\ including\ new\ method\ in\ the\ interface.\n
-comment1.params=
-comment1.target=void\ ZenMode()
-numComments=2
