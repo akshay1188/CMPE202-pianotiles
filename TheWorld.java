@@ -90,6 +90,7 @@ public class TheWorld extends World
         row4.addTile(tile14);
         row4.addTile(tile15);
         row4.addTile(tile16);
+
         
         Points points = new Points();
         addObject(points, 180, 20);
