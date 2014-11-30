@@ -15,11 +15,11 @@ public class Slow implements GameStrategy
             speed = 40;
         }
         if(speed > 50){
-            if(Score.getInstance().getScore() % 8 == 0){
+            if(Score.getInstance().getScore() % 10 == 0){
                 speed+=2;
             }
         }else{
-            if(Score.getInstance().getScore() % 4 == 0){
+            if(Score.getInstance().getScore() % 6 == 0){
                 speed+=2;
             }
         }

@@ -8,11 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fast implements GameStrategy
 {
-    static private int speed = 40;    
+    static private int speed = 45;    
         
     public int calculateSpeed(){ 
         if(Score.getInstance().getScore() == 0){
-            speed = 40;
+            speed = 45;
         }
         if(speed > 70){
             if(Score.getInstance().getScore() % 12 == 0){
@@ -20,7 +20,7 @@ public class Fast implements GameStrategy
             }
         }else{
             if(Score.getInstance().getScore() % 8 == 0){
-                speed+=5;
+                speed+=4;
             }
         }
         return speed;
